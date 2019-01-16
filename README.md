@@ -1,4 +1,2 @@
-# oiwyn.github.io
-Express Bahari Website
-
-Website Design for Express Bahari
+# bahari.owynn.me 
+website for express-bahari.com
