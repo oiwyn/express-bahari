@@ -17,7 +17,7 @@
 </head>
 <body>
 	<!-- Wrapper -->
-	<div id="wrapper">
+	<div id="wrapper" class="new-bg">
 		<!-- Header -->
 		<header class="header-transparent dark header-no-sticky" id="header">
 			<div id="header-wrap">
@@ -26,31 +26,6 @@
 					<div id="logo">
 						<a class="logo" data-dark-logo="homepages/expbahari/images/logo.png" href="index.html"><img alt="Bahari Logo" src="homepages/expbahari/images/logo.png"></a>
 					</div><!--End: Logo-->
-					<!--Header Extras, display:none for now-->
-					<div class="header-extras">
-						<ul>
-							<!-- <li class="d-none d-sm-block"> -->
-							<!-- POSSIBLE TICKET BOOKING SYSTEM -->
-							<!-- <div id="shopping-cart"> -->
-							<!-- <a href="shop-cart.html"> -->
-							<!-- <span class="shopping-cart-items">8</span> -->
-							<!-- <i class="fa fa-shopping-cart"></i></a> -->
-							<!-- </div> -->
-							<!-- end: POSSIBLE TICKET BOOKING SYSTEM -->
-							<!-- </li> -->
-							<!-- <li> -->
-							<!-- POSSIBLE LANGUAGE CHANGING SYSTEM -->
-							<!-- <div class="topbar-dropdown"> -->
-							<!-- <a class="title"><i class="fas fa-globe-americas"></i></a> -->
-							<!-- <div class="dropdown-list"> -->
-							<!-- <a class="list-entry" href="#">French</a> -->
-							<!-- <a class="list-entry" href="#">Spanish</a> -->
-							<!-- </div> -->
-							<!-- </div> -->
-							<!-- end: POSSIBLE TICKET BOOKING SYSTEM -->
-							<!-- </li> -->
-						</ul>
-					</div><!--end: Header Extras-->
 					<!--Navigation Resposnive Trigger-->
 					<div id="mainMenu-trigger">
 						<button class="lines-button x"><span class="lines"></span></button>
@@ -156,106 +131,168 @@
 			</div>
 		</header><!-- end: Header -->
 		<!-- Slider -->
-		<div class="inspiro-slider arrows-large arrows-creative dots-creative" data-animate-in="fadeIn" data-animate-out="fadeOut" data-autoplay="true" data-autoplay-timeout="2600" data-height-xs="360" data-items="1" data-loop="true" id="slider">
-			<!-- Slide 1 -->
-			<div class="slide background-overlay-one" style="background-image:url('homepages/expbahari/images/1.jpg');">
-				<div class="container">
-					<div class="slide-captions">
-						<!-- Captions -->
-						<h2 class="text-medium no-margin">18 Kota. 1 Indonesia.</h2>
-						<h2 class="text-large no-margin">Kami Bangga Melayani Anda.</h2><!-- end: Captions -->
-					</div>
-				</div>
-			</div><!-- end: Slide 1 -->
-		</div><!--end: Slider -->
-		<!-- POSSIBLE RESERVATION FORM -->
-		<section class="reservation-form-over no-padding">
-			<div class="container">
-				<form action="#" method="post">
-					<div class="row reservation-form reservation-kapal">
-						<div class="col-lg-3">
-							<div class="form-group">
-								<label>Tanggal Keberangkatan</label>
-								<div class="form-group">
-									<div class="input-group">
-										<input class="form-control form-bahari" name="tanggalKeberangkatan" type="text">
-										<div class="input-group-append">
-											<span class="input-group-text" id="basic-addon2"><i class="fas fa-calendar"></i></span>
+		<section class="fullscreen background-overlay-one" id="vegas-slideshow">
+			<div class="container-fullscreen">
+				<div class="text-middle">
+					<div class="container">
+						<div class="row">
+							<div class="col-lg-7">
+								<div class="text-light p-b-20">
+									<h2 class="text-small no-margin text-colored">18 Kota. 1 Indonesia.</h2>
+									<h2 class="text-large no-margin">Kami Bangga Melayani Anda.</h2></div>
+							</div>
+							<div class="col-lg-5">
+								<div id="contact-card">
+									<div class="hubungi-hero">
+										<h4>Butuh bantuan? Hubungi kami sekarang!</h4>
+									</div>
+										<div class="row">
+											<div class="col-lg-12 list-kota-hero">
+												<div class="form-group">
+													<label>Kota</label>
+													<select class="form-control"id="pilih-pulau-kota" style="font-weight: 700">
+														<option value="">Pilih kota...</option>
+														<optgroup label="Jawa">
+														<option value="semarang">Semarang</option>
+														<option value="karimunjawa">Karimunjawa</option>
+														<option value="jepara">Jepara</option>
+														<option value="kaliadem">Kali Adem</option>
+														<option value="ptidung">Pulau Tidung</option>
+														<option value="kalianget">Kalianget</option>
+														<option value="kangean">Kangean</option>
+														<option value="gresik">Gresik</option>
+														<option value="bawean">Bawean</option>
+														</optgroup>
+														<optgroup label="Sumatera">
+														<option value="belitung">Belitung</option>
+														<option value="pangkalpinang">Pangkal Pinang</option>
+														<option value="aceh">Banda Aceh</option>
+														<option value="sabang">Sabang</option>
+														<option value="palembang">Palembang</option>
+														<option value="muntok">Muntok</option>
+														</optgroup>
+														<optgroup label="Nusa Tenggara Timur">
+														<option value="kupang">Kupang</option>
+														<option value="rote">Rote</option>
+														</optgroup>
+													</select>
+												</div>
+												<div id="semarang" class="kontak-info" style="display:none">
+												<ul class="list-group list-group-flush detail-kontak">
+													<li class="list-group-item"><span>No. Telepon:</span>0859-5042-4411</li>
+													<li class="list-group-item"><span>Call Center:</span>0813-5067-9767</li>
+												</ul>
+												</div>
+												<div id="karimunjawa" class="kontak-info" style="display:none">
+												<ul class="list-group list-group-flush detail-kontak">
+													<li class="list-group-item"><span>No. Telepon:</span>0297-312-333</li>
+													<li class="list-group-item"><span>Call Center:</span>0813-5067-9769</li>
+												</ul>
+												</div>
+												<div id="jepara" class="kontak-info" style="display:none">
+												<ul class="list-group list-group-flush detail-kontak">
+													<li class="list-group-item"><span>No. Telepon:</span>0291-592-999</li>
+													<li class="list-group-item"><span>Call Center:</span>0813-5067-9768	</li>
+												</ul>
+												</div>
+												<div id="kaliadem" class="kontak-info" style="display:none">
+												<ul class="list-group list-group-flush detail-kontak">
+													<li class="list-group-item"><span>No. Telepon:</span>0857-1047-9893 <br> 0822-7719-1999</li>
+													<li class="list-group-item"><span>Call Center:</span>0822-7719-1999	</li>
+												</ul>
+												</div>
+												<div id="ptidung" class="kontak-info" style="display:none">
+												<ul class="list-group list-group-flush detail-kontak">
+													<li class="list-group-item"><span>No. Telepon:</span>0813-8033-6396 <br> 0856-9376-0831</li>
+													<li class="list-group-item"><span>Call Center:</span>0813-5067-9766	</li>
+												</ul>
+												</div>
+												<div id="kalianget" class="kontak-info" style="display:none">
+												<ul class="list-group list-group-flush detail-kontak">
+													<li class="list-group-item"><span>No. Telepon:</span>0328-6731-211</li>
+													<li class="list-group-item"><span>Call Center:</span>0813-7333-5681	</li>
+												</ul>
+												</div>
+												<div id="kangean" class="kontak-info" style="display:none">
+												<ul class="list-group list-group-flush detail-kontak">
+													<li class="list-group-item"><span>No. Telepon:</span>-</li>
+													<li class="list-group-item"><span>Call Center:</span>0813-7333-5682	</li>
+												</ul>
+												</div>
+												<div id="gresik" class="kontak-info" style="display:none">
+												<ul class="list-group list-group-flush detail-kontak">
+													<li class="list-group-item"><span>No. Telepon:</span>031-3983-600 <br> 031-3983-700</li>
+													<li class="list-group-item"><span>Call Center:</span>0813-5067-9771	</li>
+												</ul>
+												</div>
+												<div id="bawean" class="kontak-info" style="display:none">
+												<ul class="list-group list-group-flush detail-kontak">
+													<li class="list-group-item"><span>No. Telepon:</span>0325-422-257</li>
+													<li class="list-group-item"><span>Call Center:</span>0813-5067-9772	</li>
+												</ul>
+												</div>
+												<div id="belitung" class="kontak-info" style="display:none">
+												<ul class="list-group list-group-flush detail-kontak">
+													<li class="list-group-item"><span>No. Telepon:</span>0719-251-30</li>
+													<li class="list-group-item"><span>Call Center:</span>0813-5067-9761	</li>
+												</ul>
+												</div>
+												<div id="pangkalpinang" class="kontak-info" style="display:none">
+												<ul class="list-group list-group-flush detail-kontak">
+													<li class="list-group-item"><span>No. Telepon:</span>0717-431-818</li>
+													<li class="list-group-item"><span>Call Center:</span>0813-5067-9762	</li>
+												</ul>
+												</div>
+												<div id="aceh" class="kontak-info" style="display:none">
+												<ul class="list-group list-group-flush detail-kontak">
+													<li class="list-group-item"><span>No. Telepon:</span>0651-437-91</li>
+													<li class="list-group-item"><span>Call Center:</span>0813-5067-9760	</li>
+												</ul>
+												</div>
+												<div id="sabang" class="kontak-info" style="display:none">
+												<ul class="list-group list-group-flush detail-kontak">
+													<li class="list-group-item"><span>No. Telepon:</span>0652-3324-800</li>
+													<li class="list-group-item"><span>Call Center:</span>0813-5067-9759	</li>
+												</ul>
+												</div>
+												<div id="palembang" class="kontak-info" style="display:none">
+												<ul class="list-group list-group-flush detail-kontak">
+													<li class="list-group-item"><span>No. Telepon:</span>0711-351-999</li>
+													<li class="list-group-item"><span>Call Center:</span>-</li>
+												</ul>
+												</div>
+												<div id="muntok" class="kontak-info" style="display:none">
+												<ul class="list-group list-group-flush detail-kontak">
+													<li class="list-group-item"><span>No. Telepon:</span>0716-211-40</li>
+													<li class="list-group-item"><span>Call Center:</span>-</li>
+												</ul>
+												</div>
+												<div id="tenau" class="kontak-info" style="display:none">
+												<ul class="list-group list-group-flush detail-kontak">
+													<li class="list-group-item"><span>No. Telepon:</span>0380-890-181</li>
+													<li class="list-group-item"><span>Call Center:</span>0813-5067-9775</li>
+												</ul>
+												</div>
+												<div id="rote" class="kontak-info" style="display:none">
+												<ul class="list-group list-group-flush detail-kontak">
+													<li class="list-group-item"><span>No. Telepon:</span>0380-871-297</li>
+													<li class="list-group-item"><span>Call Center:</span>0813-5067-9776</li>
+												</ul>
+												</div>
+											</div>
 										</div>
+									<div class="col-lg-14">
+										<a href="hubungikami.html">
+											<button class="btn btn-warning btn-block btn-shadow m-b-0"><span>Lihat Semua </span><i class="fas fa-chevron-right"></i></button>
+										</a>
 									</div>
 								</div>
 							</div>
 						</div>
-						<div class="col-lg-4">
-							<div class="form-group">
-								<label>Rute Pelayaran</label> <select class="form-bahari" id="rute_pelayaran" name="rute_pelayaran">
-									<option value="">
-										---
-									</option>
-									<optgroup label="Jawa">
-										<option value="#">
-											Semarang - Karimunjawa
-										</option>
-										<option value="#">
-											Karimunjawa - Jepara
-										</option>
-										<option value="#">
-											Kali Adem - Pulau Tidung
-										</option>
-										<option value="#">
-											Kalianget - Kangean
-										</option>
-										<option value="#">
-											Gresik - Bawean
-										</option>
-									</optgroup>
-									<optgroup label="Sumatera">
-										<option value="#">
-											Belitung - Pangkal Pinang
-										</option>
-										<option value="#">
-											Banda Aceh - Sabang
-										</option>
-										<option value="#">
-											Palembang - Muntok
-										</option>
-									</optgroup>
-									<optgroup label="Nusa Tenggara Timur">
-										<option value="#">
-											Kupang - Rote
-										</option>
-									</optgroup>
-								</select>
-							</div>
-						</div>
-						<div class="col-lg-1">
-							<div class="form-group">
-								<label>Dewasa</label> <input class="form-bahari" max="10" min="1" name="dewasa" placeholder="2" type="number" value="">
-							</div>
-						</div>
-						<div class="col-lg-1">
-							<div class="form-group">
-								<label>Anak</label> <input class="form-bahari" max="10" min="1" name="anak" placeholder="0" type="number" value="">
-							</div>
-						</div>
-						<div class="col-lg-1">
-							<div class="form-group">
-								<label>Bayi</label> <input class="form-bahari" max="10" min="1" name="infant" placeholder="0" type="number" value="">
-							</div>
-						</div>
-						<div class="col-lg-1">
-							<div class="form-group">
-								<button class="btn btn-warning btn-reveal btn-reveal-left m-t-25"><span>Cek Tiket</span><i class="fas fa-search"></i></button>
-							</div>
-						</div>
-						<div class="col-lg-12">
-							<p>Sebelum memesan tiket, pastikan kamu sudah mengecek apakah <strong>Express Bahari</strong> sedang mengadakan <a href="promo.html">promo</a> untuk rute pilihan kamu!<br>
-							Ada pertanyaan? Kamu bisa melihat-lihat daftar pertanyaan <a href="#faqs">disini</a> terlebih dahulu, dan apabila ada pertanyaan lebih lanjut kamu bisa langsung menghubungi <a href="hubungikami.html">kami</a>.</p>
-						</div>
 					</div>
-				</form>
+				</div>
 			</div>
-		</section><!-- end: POSSIBLE RESERVATION FORM -->
+		</section><!--end: Slider -->
 		<!-- PROMO -->
 		<section>
 			<div class="container">
@@ -497,7 +534,7 @@
 				<p>Jadwal dapat berubah sewaktu-waktu tanpa pemberitahuan terlebih dahulu, untuk informasi lebih lanjut silahkan hubungi kantor cabang yang bersangkutan.</p>
 			</div>
 		</section><!-- end: JADWAL -->
-		<div class="seperator">
+		<div class="seperator new-bg">
 			<i class="fa fa-dot-circle-o"></i>
 		</div><!-- FAQ & PUSAT PERTANYAAN -->
 		<section id="faqs">
@@ -507,7 +544,7 @@
 						<div class="text-medium">
 							Ada Pertanyaan?
 						</div>
-						<p class="lead">Kami siap membantu!</p>
+						<p class="lead">Apabila ada pertanyaan lebih lanjut, kamu bisa langsung <a href="hubungikami.html">menelepon</a> kantor cabang kami yang tersebar di berbagai kota di Indonesia!</p>
 						<div class="tabs p-r-20">
 							<ul class="nav nav-tabs nav-justified text-left" id="myTab">
 								<li class="nav-item pertanyaan-header">
@@ -739,19 +776,36 @@
 	</div><!-- end: Wrapper -->
 	<!-- Go to top button -->
 	<a id="goToTop"><i class="fa fa-angle-up top-icon"></i><i class="fa fa-angle-up"></i></a> <!--Plugins-->
-	 
 	<script src="js/jquery.js">
 	</script> 
 	<script src="js/plugins.js">
 	</script> <!--Template functions-->
-	 
 	<script src="js/functions.js">
 	</script> <!-- Date & Time Picker, commented, as not needed for now -->
 	<link href="js/plugins/components/daterangepicker/daterangepicker.css" rel="stylesheet" type="text/css">
 	<script src="js/plugins/components/moment.min.js">
 	</script> 
 	<script src="js/plugins/components/daterangepicker/daterangepicker.js">
-	</script> 
+	</script>
+	<link href="js/plugins/components/vegas.min.css" rel="stylesheet">
+	<script src="js/plugins/components/vegas.min.js"></script>
+	<script>
+	$(function() {
+		$('#vegas-slideshow').vegas({
+			overlay: 'js/plugins/components/overlays/01.png',
+			slides: [
+				{ src: 'homepages/expbahari/images/1.jpg' }
+			]
+		});
+	});
+	</script>
+	<script>$(function() {
+        $('#pilih-pulau-kota').change(function(){
+            $('.kontak-info').hide();
+            $('#' + $(this).val()).show();
+        });
+    });
+	</script>
 	<script>
 	          $(function() {
 	              $('input[name="tanggalKeberangkatan"]').daterangepicker({
