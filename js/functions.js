@@ -321,7 +321,7 @@ var INSPIRO = {},
 
 
                 });
-                setTimeout(function () {
+               var t = setTimeout(function () {
                     if ($(".animsition-loading").length) {
                         $body.addClass("no-page-loader");
                         $(".animsition-loading").hide();
@@ -450,7 +450,7 @@ var INSPIRO = {},
                 if ($body.hasClass('device-lg') || $body.hasClass('device-md')) {
                     var elemOuterHeight = $footerStickyClass.outerHeight();
 
-                    setTimeout(function () {
+                   var t = setTimeout(function () {
                         $footerStickyClass.addClass("footer-sticky-active");
                     }, 1000);
 
@@ -523,7 +523,6 @@ var INSPIRO = {},
                         }
                     } else {
                         $header.removeClass().addClass($headerCurrentClasses);
-                        INSPIRO.header.logoStatus();
                     }
                 }
             }
@@ -638,7 +637,7 @@ var INSPIRO = {},
                     $body.removeClass("side-panel-active");
                     $("#side-panel-trigger").removeClass("toggle-active");
                 });
-                setTimeout(function () {
+               var t = setTimeout(function () {
                     INSPIRO.elements.gridLayoutRefresh();
                 }, 1000);
             }
@@ -802,7 +801,7 @@ var INSPIRO = {},
                             freeDrag: false,
                             callbacks: true,
                             onInitialize: function (event) {
-                                setTimeout(function () {
+                               var t = setTimeout(function () {
                                     elem.find(".owl-item:not(.active) .slide > video").each(function () {
                                         this.pause();
                                     });
@@ -828,7 +827,7 @@ var INSPIRO = {},
                             var $captionElem = $(this),
                                 captionDelay = $captionElem.data("caption-delay") || index * 80,
                                 captionAnimation = $captionElem.data('caption-animation') || "fadeInUp";
-                            setTimeout(function () {
+                            var t = setTimeout(function () {
                                 $captionElem.removeClass('slide-caption-hide').addClass(captionAnimation);
                             }, captionDelay);
                         });
@@ -845,14 +844,14 @@ var INSPIRO = {},
                                 var $captionElem = $(this),
                                     captionDelay = $captionElem.data("caption-delay") || (index * 350 + 1000),
                                     captionAnimation = $captionElem.data('caption-animation') || "fadeInUp";
-                                setTimeout(function () {
+                                var t = setTimeout(function () {
                                     $captionElem.removeClass('slide-caption-hide').addClass(captionAnimation);
                                 }, captionDelay);
                             });
                             if ($window.width() > 992) {
                                 //Pause HTML5 Video
                                 if (currentSlide.find("video").length > 0) {
-                                    setTimeout(function () {
+                                    var t = setTimeout(function () {
                                         currentSlide.find(".slide video").get(0).play();
                                     }, 1000);
                                 }
@@ -882,7 +881,7 @@ var INSPIRO = {},
 
                     } else {
                         elem.addClass("slider-loaded");
-                        setTimeout(function () {
+                       var t = setTimeout(function () {
                             elem.find('.slide').find(".kenburns-bg").addClass("kenburns-bg-animate");
                         }, 200);
                     }
@@ -1168,7 +1167,6 @@ var INSPIRO = {},
                                 elem.toggleClass(toggleItemClass);
                             }
                         }
-                        INSPIRO.header.logoStatus();
                         elem.toggleClass("toggle-active");
                         return false;
                     });
@@ -1234,9 +1232,24 @@ var INSPIRO = {},
         },
         naTo: function () {
             $('a.scroll-to, #dotsMenu > ul > li > a, .menu-one-page nav > ul > li > a').on('click', function () {
+                  if ($body.is('.device-xxs, .device-xs, .device-sm')) {
+                    if($mainmenu.hasClass('menu-one-page')){                   
+                        $header.find("#mainMenu").css("max-height", 0);
+                        $body.toggleClass("mainMenu-open");
+                        $("#mainMenu-trigger button").toggleClass("toggle-active");             
+                    } 
+                }
+                
+                var extraPaddingTop = 0,
+                    extraHeaderHeight = 0;
+                
+                if($('.dashboard').length > 0) { extraPaddingTop = 30; }
+                if($header.length > 0) { extraHeaderHeight = $header.height(); }
+                
                 var $anchor = $(this);
+                
                 $('html, body').stop(true, false).animate({
-                    scrollTop: $($anchor.attr('href')).offset().top
+                    scrollTop:  ($($anchor.attr('href')).offset().top - (extraHeaderHeight + extraPaddingTop))
                 }, 1500, 'easeInOutExpo');
                 return false;
             });
@@ -1317,7 +1330,7 @@ var INSPIRO = {},
               });*/
         },
         animations: function () {
-            if (dataAnimation.length > 0 && $body.hasClass('device-lg') || $body.hasClass('device-md')) {
+            if (dataAnimation.length > 0) {
                 dataAnimation.each(function () {
                     $(this).addClass("animated");
                     var $elem = $(this),
@@ -1326,7 +1339,7 @@ var INSPIRO = {},
                         animationDirection = ~animationType.indexOf("Out") ? "back" : "forward";
                     if (animationDirection == "forward") {
                         $elem.appear(function () {
-                            setTimeout(function () {
+                           var t = setTimeout(function () {
                                 $elem.addClass(animationType + " visible");
                             }, animationDelay);
                         }, {
@@ -1343,7 +1356,7 @@ var INSPIRO = {},
                     if ($elem.parents('.demo-play-animations').length) {
                         $elem.on("click", function () {
                             $elem.removeClass(animationType);
-                            setTimeout(function () {
+                            var t = setTimeout(function () {
                                 $elem.addClass(animationType);
                             }, 50);
                             return false;
@@ -1411,7 +1424,7 @@ var INSPIRO = {},
                 return true;
             }
             if ($countdownTimer.length > 0) {
-                setTimeout(function () {
+                var t = setTimeout(function () {
                     $('[data-countdown]').each(function () {
                         var $this = $(this),
                             finalDate = $(this).data('countdown');
@@ -1442,7 +1455,7 @@ var INSPIRO = {},
                     };
                     if ($body.hasClass('device-lg') || $body.hasClass('device-md')) {
                         $(elem).appear(function () {
-                            setTimeout(function () {
+                            var t = setTimeout(function () {
                                 progressBarRun();
                             }, delay);
                         });
@@ -1567,7 +1580,7 @@ var INSPIRO = {},
                     //elem.imagesLoaded( function() {
                        //setTimeout(function () {
 elem.imagesLoaded(function() {
-    setTimeout(function () {
+   var t = setTimeout(function () {
                             elem.isotope({
                                 layoutMode: gridLayoutMode,
                                 transitionDuration: gridTransition,
@@ -1628,7 +1641,7 @@ elem.imagesLoaded(function() {
             if ($gridLayout.length > 0) {
                 $gridLayout.each(function () {
                     var elem = $(this);
-                    setTimeout(function () {
+                    var t = setTimeout(function () {
                         elem.isotope('layout');
                     }, 300);
                 });
@@ -1662,11 +1675,11 @@ elem.imagesLoaded(function() {
                         extraScrollPx: 10,
                         errorCallback: function () {
                             loadMoreElem.addClass("animated visible fadeOut");
-                            setTimeout(function () {
+                            var t = setTimeout(function () {
                                 loadMoreElem.hide();
                                 elem.after(loadMoreMessage);
                             }, 500);
-                            setTimeout(function () {
+                            var t = setTimeout(function () {
                                 $(".infinite-scroll-message").addClass("animated visible fadeOut");
                             }, 3800);
                         },
@@ -1992,7 +2005,7 @@ elem.imagesLoaded(function() {
 
                     /*Cookie Notify*/
                     if (elem.hasClass("cookie-notify")) {
-                        setTimeout(function () {
+                        var t = setTimeout(function () {
                             if ($.cookie(coockieName) != 'confirfmed') {
                                 cookieNotify.addClass(modalShowClass);
                             }
@@ -2017,7 +2030,7 @@ elem.imagesLoaded(function() {
                     /*Modal Auto Show*/
                     if (elem.hasClass(modalShow)) {
                         var modalElem = $(this);
-                        setTimeout(function () {
+                        var t = setTimeout(function () {
                             modalElem.addClass(modalShowClass);
                         }, modalDelay);
                     }
@@ -2028,7 +2041,7 @@ elem.imagesLoaded(function() {
                     });
                     /*Cookie Notify*/
                     if (elem.hasClass("cookie-notify")) {
-                        setTimeout(function () {
+                        var t = setTimeout(function () {
                             if ($.cookie(coockieName) != 'confirfmed') {
                                 cookieNotify.addClass(modalShowClass);
                             }
@@ -2127,7 +2140,7 @@ elem.imagesLoaded(function() {
                 return true;
             }
 
-            setTimeout(function () {
+            var t = setTimeout(function () {
                 if ($widget_twitter.length > 0) {
                     $widget_twitter.each(function () {
                         var $elem = $(this),
@@ -2230,7 +2243,7 @@ elem.imagesLoaded(function() {
                                         }, {
                                             type: 'danger'
                                         });
-                                        setTimeout(function () {
+                                        var t = setTimeout(function () {
                                             button.html(buttonText);
                                         }, 1000);
                                     }
@@ -2327,7 +2340,7 @@ elem.imagesLoaded(function() {
             //INSPIRO.slider.sliderScreenSizeControl();
             // INSPIRO.header.mainMenu();
             INSPIRO.core.customHeight();
-            INSPIRO.core.stickyFooter();
+           // INSPIRO.core.stickyFooter();
         },
     };
     $window.on('resize', INSPIRO.documentOnResize.functions);

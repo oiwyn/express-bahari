@@ -49,7 +49,6 @@ img {
 	background-color: #253993;
 	border-top-right-radius: 5px;
 	border-top-left-radius: 5px;
-	background: linear-gradient(to bottom right, #1f52e1 0%, #d82627 100%) !important;
 }
 .modal-body-price {
 	padding: 10px 15px 5px 15px;
@@ -153,6 +152,10 @@ img {
 	display: inline;
 	background-color: rgba(0, 0, 0, .1);
 }
+#header.header-sticky #header-wrap {
+	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+	border-bottom: 1px solid #ddd !important;
+}
 #mainMenu .badge-danger {
 	display: inline !important;
 	font-size: 12px !important;
@@ -174,7 +177,7 @@ img {
 	opacity: 1;
 }
 #contact-card {
-	background-color: #fff;
+	background-color: rgba(255, 255, 255, 0.9);
 	border-top-right-radius: 3px;
 	border-top-left-radius: 3px;
 	border-top: 10px solid #ffb20e;
@@ -198,6 +201,9 @@ small {
 }
 h5 {
 	letter-spacing: 0px;
+}
+.seperator::before, .seperator::after, .separator::before, .separator::after {
+	border-bottom: 1px solid #dcdcdc;
 }
 .hubungi-hero {
 	letter-spacing: 0px;
@@ -358,6 +364,7 @@ optgroup option {
 }
 .firstkota {
 	padding-top: 0px;
+	margin-top: -20px;
 }
 .pilih-kota {
 	max-width: 1340px;
@@ -371,8 +378,164 @@ optgroup option {
 .tabletarif:hover {
 	cursor: default;
 }
+/* PRICINGTABLE CSS */
+.comparison {
+	margin: 0 auto;
+	font-size: 13px;
+	text-align: center;
+	padding: 0px 0px 10px 0px;
+}
+.comparison table {
+	width: 100%;
+	border-collapse: collapse;
+	border-spacing: 0;
+	table-layout: fixed;
+	border-bottom: 1px solid #CCC;
+}
+.comparison td, .comparison th {
+	border-right: 1px solid #CCC;
+	empty-cells: show;
+	padding: 10px;
+}
+.compare-heading {
+	font-size: 18px;
+	font-weight: bold !important;
+	padding	: 10px 0px 10px 0px !important;
+}
+.comparison tbody tr:nth-child(odd) {
+	display: none;
+}
+.comparison .compare-row {
+	background: #fff;
+	border-left: 1px solid #ccc;
+    border-top: 1px solid #ddd;
+}
+.comparison .tickblue {
+	color: #0078C1;
+}
+.comparison .tickgreen {
+	color: #009E2C;
+}
+.comparison th {
+	font-weight: normal;
+	padding: 0;
+	border-bottom: 1px solid #CCC;
+}
+.comparison tr td:first-child {
+	text-align: left;
+}
+.comparison .qbse, .comparison .qbo, .comparison .tl {
+	color: #FFF;
+	padding: 5px;
+	font-size: 13px;
+	border-right: 1px solid #CCC;
+	border-bottom: 0;
+}
+.comparison .tl2 {
+	border-right: 0;
+}
+.comparison .qbse {
+	background: linear-gradient(to bottom right, #1f52e1 10%, #d82627 120%) !important;
+	border-top-left-radius: 3px;
+	border-left: 0px;
+}
+.comparison .qbo {
+	background: #253993;
+	border-top-right-radius: 3px;
+	border-right: 0px;
+}
+.comparison .price-info {
+	padding: 5px 15px 15px 15px;
+}
+.comparison .price-was {
+	color: #999;
+	text-decoration: line-through;
+}
+.comparison .price-now, .comparison .price-now span {
+	color: #253993;
+}
+.comparison .price-now span {
+	font-size: 22px;
+}
+.comparison .price-small {
+	font-size: 15px !important;
+	position: relative;
+}
+.comparison .price-buy {
+	background: #253993;
+	padding: 10px 20px;
+	font-size: 12px;
+	display: inline-block;
+	color: #FFF;
+	text-decoration: none;
+	border-radius: 3px;
+	text-transform: uppercase;
+	margin: 5px 0 10px 0;
+}
+.comparison .price-try {
+	font-size: 12px;
+}
+.comparison .price-try a {
+	color: #202020;
+}
+.comparison .pricing-header{
+	background: #f1f1f1;
+}
+.comparison .pricing-header td{
+	font-weight: 700;
+}
+@media (max-width: 767px) {
+	.comparison td:first-child, .comparison th:first-child {
+		display: none;
+	}
+	.comparison tbody tr:nth-child(odd) {
+		display: table-row;
+		background: #F7F7F7;
+	}
+	.comparison .row {
+		background: #FFF;
+	}
+	.comparison td, .comparison th {
+		border: 1px solid #CCC;
+	}
+	.price-info {
+		border-top: 0 !important;
+	}
+}
+@media (max-width: 639px) {
+	.comparison .price-buy {
+		padding: 5px 10px;
+	}
+	.comparison td, .comparison th {
+		padding: 10px 5px;
+	}
+	.comparison .hide-mobile {
+		display: none;
+	}
+	.comparison .price-now span {
+		font-size: 16px;
+	}
+	.comparison .price-small {
+		font-size: 16px !important;
+		top: 0;
+		left: 0;
+	}
+	.comparison .qbse, .comparison .qbo {
+		font-size: 12px;
+		padding: 10px 5px;
+	}
+	.comparison .price-buy {
+		margin-top: 10px;
+	}
+	.compare-heading {
+		font-size: 13px;
+	}
+}
+/* END -- PRICINGTABLE -- END*/
+
 .tariftiket {
 	margin-top: -10px;
+	margin-bottom: 20px !important;
 	border: 1px solid #ddd;
 	border-radius: 1px;
 	box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
