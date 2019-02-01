@@ -480,6 +480,7 @@ optgroup option {
 }
 .comparison .pricing-header{
 	background: #f1f1f1;
+	border: 1px solid #bbb;
 }
 .comparison .pricing-header td{
 	font-weight: 700;
@@ -522,7 +523,7 @@ optgroup option {
 	}
 	.comparison .qbse, .comparison .qbo {
 		font-size: 12px;
-		padding: 10px 5px;
+		padding: 5px;
 	}
 	.comparison .price-buy {
 		margin-top: 10px;
