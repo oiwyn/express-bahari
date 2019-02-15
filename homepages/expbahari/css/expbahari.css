@@ -327,6 +327,8 @@ optgroup option {
 }
 .hr-title abbr {
 	background-color: #f9f9f9;
+	color: #939393;
+    font-weight: 700;
 }
 .stickyKota {
 	position: fixed;
@@ -709,8 +711,7 @@ optgroup option {
 	text-align: center;
 }
 .year-section {
-	margin: 50px auto;
-	color: @color-light;
+	margin: 35px auto;
 	font-size: 1.8em;
 }
 .year {
@@ -848,5 +849,6 @@ optgroup option {
 	font-weight: 700;
 	margin-right: 6px;
 	color: #fff;
-	background-color: #253993;
+	background-color: #334dc3; 
+	border: 1px solid #2b41a5;
 }
