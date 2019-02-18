@@ -853,6 +853,7 @@ optgroup option {
 	border: 1px solid #2b41a5;
 }
 .text-light .text-medium{
+	font-weight: 500;
 	font-size: 50px !important;
 	line-height: 1;
 	margin-bottom: 0px;
