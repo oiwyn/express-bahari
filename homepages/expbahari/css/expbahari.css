@@ -593,10 +593,12 @@ optgroup option {
 	color: rgba(0, 0, 0, 0.5) !important;
 }
 .jadwal-kbr {
-	margin-bottom: 0 !important;
-	box-shadow: none;
-	border-radius: 3px;
-	border-top: 5px solid #70758e;
+	margin-bottom: 20px !important;
+    box-shadow: none;
+    background-color: #fff;
+    border: 2px solid #e7e7e7;
+    border-radius: 3px;
+	padding: 0px 15px;
 }
 .jadwal-kbr:hover {
 	box-shadow: none !important;
@@ -622,6 +624,7 @@ optgroup option {
 	color: #565656;
 	padding-top: 0px;
 	font-size: 13px;
+	margin-bottom: 13px;
 }
 .tarif-jadwal .kota {
 	text-transform: uppercase;
@@ -629,7 +632,9 @@ optgroup option {
 	font-size: 12px;
 	display: block;
 	margin-top: 10px;
-	color: #fff !important;
+	color: #253993 !important;
+	border-bottom: 1px solid #ddd;
+    margin-bottom: 3px;
 }
 .tarif-jadwal .jadwalkb {
 	text-transform: uppercase;
